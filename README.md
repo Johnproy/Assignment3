@@ -13,7 +13,7 @@ How to Setup and Run :
 
 We ran the code in a python virtual environment with PyTorch and torchvision installed. The training was done on university cluster environment.
 
-1. Create working directory using `mkdir -p ~/tml26_task3_robustness` in cluster, also create checkpoint directory inside it using `mkdir -p checkpoints`.
+1. Create working directory using `mkdir -p ~/tml26_task3_robustness` in cluster, also create checkpoint directory inside it using `cd ~/tml26_task3_robustness`, then `mkdir -p checkpoints`.
 2. Then place the assignment files into this repository,
     Dataset file - train.npz
     Training script - train_apex.py
