@@ -54,7 +54,7 @@ We ran the code in a python virtual environment with PyTorch and torchvision ins
 
 9. Submit the training job to cluster using, `condor_submit run_apex.sub` and monitor the job using `condor_q`
 10. The training script creates a checkpoint inside **checkpoints** directory as ***resnet50_apex.pt***.
-11. For clarity, we have preserved the final submission checkpoint along with their local score as ***BEST_APEX_R50_0544.pt**** using `cp checkpoints/resnet50_apex.pt checkpoints/BEST_APEX_R50_0544.pt`.
+11. For clarity, we have preserved the final submission checkpoint along with their local score as ***BEST_APEX_R50_0544.pt*** using `cp checkpoints/resnet50_apex.pt checkpoints/BEST_APEX_R50_0544.pt`.
 12. To submit the model, edit the `submission.py` file with `MODEL_PATH = "checkpoints/BEST_APEX_R50_0544.pt" and MODEL_NAME = "resnet50"` (also include the API key).
 13. Run the submission script, `python submission.py`
 14. Check the leaderboard after successfull submission for score.
