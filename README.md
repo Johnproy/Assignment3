@@ -25,7 +25,8 @@ We ran the code in a python virtual environment with PyTorch and torchvision ins
    `pip install --upgrade pip`
    `pip install torch torchvision numpy tqdm requests`
 5. Create the cluster run script using,
-      ```cat > run_apex.sh <<'EOF'
+      ```     
+      cat > run_apex.sh <<'EOF'
       #!/bin/bash
       set -eux
       cd ~/tml26_task3_robustness
