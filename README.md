@@ -34,8 +34,10 @@ We ran the code in a python virtual environment with PyTorch and torchvision ins
       echo "The APEX Model"
       python train_apex.py
       EOF
-      chmod +x run_apex.sh```
+      chmod +x run_apex.sh
+      ```
 7. Create HTcondor file using,
+      ```
       cat > run_apex.sub <<'EOF'
       universe = vanilla
       container_image = /scratch/common/images/code-server-default-env.sif
@@ -48,11 +50,13 @@ We ran the code in a python virtual environment with PyTorch and torchvision ins
       request_memory = 32 GB
       queue
       EOF
-8. Submit the training job to cluster using, `condor_submit run_apex.sub` and monitor the job using `condor_q`
-9. The training script creates a checkpoint inside `checkpoints` directory as `resnet50_apex.pt`.
-10. For clarity, we have preserved the final submission checkpoint along with their local score as `BEST_APEX_R50_0544.pt`using `cp checkpoints/resnet50_apex.pt checkpoints/BEST_APEX_R50_0544.pt`.
-11. To submit the model, edit the `submission.py` file with `MODEL_PATH = "checkpoints/BEST_APEX_R50_0544.pt" and MODEL_NAME = "resnet50"` (also include the API key).
-12. Run the submission script, `python submission.py`
-13. Check the leaderboard after successfull submission for score.
+      ```
+
+9. Submit the training job to cluster using, `condor_submit run_apex.sub` and monitor the job using `condor_q`
+10. The training script creates a checkpoint inside `checkpoints` directory as `resnet50_apex.pt`.
+11. For clarity, we have preserved the final submission checkpoint along with their local score as `BEST_APEX_R50_0544.pt`using `cp checkpoints/resnet50_apex.pt checkpoints/BEST_APEX_R50_0544.pt`.
+12. To submit the model, edit the `submission.py` file with `MODEL_PATH = "checkpoints/BEST_APEX_R50_0544.pt" and MODEL_NAME = "resnet50"` (also include the API key).
+13. Run the submission script, `python submission.py`
+14. Check the leaderboard after successfull submission for score.
 
 
