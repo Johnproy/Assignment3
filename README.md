@@ -25,7 +25,7 @@ We ran the code in a python virtual environment with PyTorch and torchvision ins
    `pip install --upgrade pip`
    `pip install torch torchvision numpy tqdm requests`
 5. Create the cluster run script using,
-      cat > run_apex.sh <<'EOF'
+      ```cat > run_apex.sh <<'EOF'
       #!/bin/bash
       set -eux
       cd ~/tml26_task3_robustness
@@ -33,7 +33,7 @@ We ran the code in a python virtual environment with PyTorch and torchvision ins
       echo "The APEX Model"
       python train_apex.py
       EOF
-      chmod +x run_apex.sh
+      chmod +x run_apex.sh```
 7. Create HTcondor file using,
       cat > run_apex.sub <<'EOF'
       universe = vanilla
